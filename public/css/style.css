@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "FiraCode-Light";
+  src: url(../assets/fonts/FiraCode-Light.ttf);
+}
+
+@font-face {
+  font-family: "FiraCode-Regular";
+  src: url(../assets/fonts/FiraCode-Regular.ttf);
+}
+
+@font-face {
+  font-family: "FiraCode-SemiBold";
+  src: url(../assets/fonts/FiraCode-SemiBold.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-font-light: "FiraCode-Light", Helvetica, Arial, sans-serif;
+  --main-font-regular: "FiraCode-Regular", Helvetica, Arial, sans-serif;
+  --main-font-semi-bold: "FiraCode-SemiBold", Helvetica, Arial, sans-serif;
+  --secondary-font: Helvetica, Arial, sans-serif;
+
+  --color-red: #cc0000;
+  --color-white: #eaeaeb;
+  --color-black: #313131;
+  --color-green: #4dad5b;
+  --color-blue: #1b82b1;
+
+  --lower_font_size: 16px;
+  --medium_font_size: 24px;
+  --big_font_size: 32px;
+  --title_font_size: 50px;
+  --box_shadow: 0px 6px 50px -20px rgb(49, 49, 49, 0.2);
+}
