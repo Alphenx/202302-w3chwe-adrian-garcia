@@ -23,6 +23,7 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
+    "@typescript-eslint/no-unsafe-call": "error",
     "no-unused-vars": [
       "error",
       {

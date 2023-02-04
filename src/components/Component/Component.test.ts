@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import Component from "./Component";
 
 describe("Given a Component component", () => {
