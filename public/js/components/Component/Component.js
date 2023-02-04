@@ -1,5 +1,6 @@
-class Component {
+export default class Component {
     parentElement;
+    addListeners;
     domElement;
     constructor(parentElement, className, tag = "div") {
         this.parentElement = parentElement;
@@ -10,4 +11,3 @@ class Component {
         this.parentElement.appendChild(this.domElement);
     }
 }
-export default Component;

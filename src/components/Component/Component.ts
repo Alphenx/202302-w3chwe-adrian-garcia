@@ -1,6 +1,8 @@
 import type ComponentStructure from "../types.js";
 
-class Component implements ComponentStructure {
+export default class Component implements ComponentStructure {
+  addListeners?: () => void;
+
   domElement: HTMLElement;
 
   constructor(
@@ -16,5 +18,3 @@ class Component implements ComponentStructure {
     this.parentElement.appendChild(this.domElement);
   }
 }
-
-export default Component;
