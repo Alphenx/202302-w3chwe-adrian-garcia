@@ -12,12 +12,27 @@
   <link rel="stylesheet" href="/public/css/Card.css">
   <link rel="stylesheet" href="/public/css/CardList.css">
 
-  <script src="/public/js/index.js"></script>
+  <script type="module" src="/public/js/index.js" defer></script>
   <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-  <div class="root"></div>
+  <div class="root">
+    <header class="main-header">
+      <img src="/pokemon-logo.svg" alt="Pokemon logo" width="300px">
+      <img src="/public/assets/img/Espetero.webp" alt="Poke espeto" width="150px">
+      <h1>Pokedex oficial de Espetocoders</h1>
+    </header>
+    <section class="poke-cards-container">
+      <ul class="poke-cards">
+        <li class="poke-cards__pokemon">
+          <img src="" alt="" class="pokemon__img">
+          <p class="pokemon__number">#001</p>
+          <h4 class="pokemon__name">Bulvasur</h4>
+        </li>
+      </ul>
+    </section>
+  </div>
 </body>
 
 </html>

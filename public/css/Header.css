@@ -1,0 +1,13 @@
+.main-header {
+  background-color: var(--color-black);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-header h1 {
+  font-family: var(--main-font-semi-bold);
+  font-size: var(--title_font_size);
+  color: var(--color-white);
+  margin: 1rem 0;
+}
