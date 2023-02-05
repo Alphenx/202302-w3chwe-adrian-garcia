@@ -1,3 +1,11 @@
 .poke-cards-container__btn {
-  width: 50px;
+  text-align: center;
+}
+.poke-cards-container__btn input {
+  font-family: Helvetica, sans-serif;
+  margin: 1rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: none;
 }
