@@ -37,12 +37,15 @@ export const pokemonFetchPage = (pokemonPage: number): any => {
   fetch(`https://pokeapi.co/api/v2/pokemon/?limit=20&offset=${pokemonPage}`)
     .then(async (response) => response.json())
     .then((pokemonsObject) => {
-      console.log(pokemonsObject);
       getPokemon(pokemonsObject);
     })
     .catch((error) => {
       console.error(error);
     });
+  const buttons = document.querySelector(".poke-cards-container__btn");
+  buttons?.addEventListener("click", () => {
+    pokemonPage += 20;
+  });
 };
 
 export const pokeInfoArr: Array<{ id: number; img: string; pokeName: string }> =
@@ -62,7 +65,6 @@ const getPokemon = (pokemonsObject: {
         };
         pokeInfoArr.push(pokeInfo);
         pokeInfoArr.sort((a, b) => a.id - b.id);
-        console.log(pokeInfoArr);
       })
       .catch((error) => {
         console.error(error);
@@ -71,12 +73,4 @@ const getPokemon = (pokemonsObject: {
   return pokeInfoArr;
 };
 
-setTimeout(() => {
-  const buttons = document.querySelector(".poke-cards-container__btn");
-  let page = 20;
-  buttons?.addEventListener("click", () => {
-    page += 20;
-    pokemonFetchPage(page);
-  });
-}, 1000);
 pokemonFetchPage(0);

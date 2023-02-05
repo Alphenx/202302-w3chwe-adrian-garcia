@@ -8,8 +8,8 @@ export default class Header extends Component {
     render() {
         super.render();
         this.domElement.innerHTML = `
-      <img src="/pokemon-logo.svg" alt="Pokemon logo" width="300px">
-      <img src="/public/assets/img/sardiner.webp" alt="Poke espeto" width="150px">
+      <img src="./assets/img/pokemon-logo.svg" alt="Pokemon logo" width="300px">
+      <img src="./assets/img/sardiner.webp" alt="Poke espeto" width="150px">
       <h1>${this.#title}</h1>`;
     }
 }
