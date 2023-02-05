@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import Button from "../Button/Button.js";
 import Card from "../Card/Card.js";
 import Component from "../Component/Component.js";
 import Header from "../Header/Header.js";
@@ -7,7 +8,7 @@ import type PokemonTemplate from "../pokemon-types.js";
 export default class App extends Component {
   #headerComponent: Header;
   #classListComponent: PokemonTemplate[];
-
+  #btnComponent: Button;
   constructor(
     parentElement: HTMLElement | undefined,
     pokemonsList: PokemonTemplate[]
@@ -19,18 +20,20 @@ export default class App extends Component {
       appContainer
     );
     this.#classListComponent = pokemonsList;
+    this.#btnComponent = new Button("Previous", "Next", appContainer);
   }
 
   render(): void {
     super.render();
     this.#headerComponent.render();
+    this.#btnComponent.render();
     this.#classListComponent.forEach((pokemon) => {
-      new Card(this.domElement, pokemon, "").render();
+      new Card(this.domElement, pokemon).render();
     });
   }
 }
 
-const pokemonFetchPage = (pokemonPage: number): any => {
+export const pokemonFetchPage = (pokemonPage: number): any => {
   fetch(`https://pokeapi.co/api/v2/pokemon/?limit=20&offset=${pokemonPage}`)
     .then(async (response) => response.json())
     .then((pokemonsObject) => {
@@ -68,4 +71,12 @@ const getPokemon = (pokemonsObject: {
   return pokeInfoArr;
 };
 
+setTimeout(() => {
+  const buttons = document.querySelector(".poke-cards-container__btn");
+  let page = 20;
+  buttons?.addEventListener("click", () => {
+    page += 20;
+    pokemonFetchPage(page);
+  });
+}, 1000);
 pokemonFetchPage(0);

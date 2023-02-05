@@ -9,20 +9,24 @@
   row-gap: 1.25rem;
 }
 
-.poke-cards__pokemon {
+.poke-cards-container article {
   background-color: var(--color-white);
   box-shadow: 3px 4px 6px 2px rgb(0, 0, 0, 0.3);
   width: 18.75rem;
   height: 15rem;
   border-radius: 20px;
   font-family: var(--main-font-regular);
+  align-items: baseline;
+  padding: 2rem;
+  justify-items: center;
 }
 
-.pokemon__img {
-  border: black solid 1px;
+.poke-cards-container article img {
+  height: 100px;
 }
 
-.pokemon__name {
+.poke-cards-container article h4 {
   font-size: var(--big_font_size);
-  padding: 0.5rem 0;
+  margin: 1rem;
+  text-transform: capitalize;
 }

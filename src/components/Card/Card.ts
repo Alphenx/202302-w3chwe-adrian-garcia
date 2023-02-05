@@ -5,10 +5,9 @@ export default class Card extends Component {
   #pokemon: PokemonTemplate;
   constructor(
     parentElement: HTMLElement | undefined,
-    pokemon: PokemonTemplate,
-    cssClasses = "poke-cards__pokemon"
+    pokemon: PokemonTemplate
   ) {
-    super(parentElement, cssClasses, "article");
+    super(parentElement, "poke-cards__pokemon", "article");
     this.#pokemon = pokemon;
   }
 

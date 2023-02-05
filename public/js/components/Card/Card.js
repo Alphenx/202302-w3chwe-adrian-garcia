@@ -1,8 +1,8 @@
 import Component from "../Component/Component.js";
 export default class Card extends Component {
     #pokemon;
-    constructor(parentElement, pokemon, cssClasses = "poke-cards__pokemon") {
-        super(parentElement, cssClasses, "article");
+    constructor(parentElement, pokemon) {
+        super(parentElement, "poke-cards__pokemon", "article");
         this.#pokemon = pokemon;
     }
     render() {
