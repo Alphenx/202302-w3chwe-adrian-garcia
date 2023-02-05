@@ -1,5 +1,7 @@
-import App from "./components/App/App.js";
+import App, { pokeInfoArr } from "./components/App/App.js";
 
-const app = new App(document.body);
+const app = new App(document.body, pokeInfoArr);
 
-app.render();
+setTimeout(() => {
+  app.render();
+}, 500);
